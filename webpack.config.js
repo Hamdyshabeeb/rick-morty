@@ -1,4 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ESLintPlugin = require('eslint-plugin-react');
+const eslintPluginReact = require('eslint-plugin-react');
 
 module.exports = {
 	module: {
@@ -22,5 +24,6 @@ module.exports = {
 			template: './public/index.html',
 			filename: 'index.html',
 		}),
+		new eslintPluginReact(),
 	],
 };
