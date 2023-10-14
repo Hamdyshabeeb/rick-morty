@@ -25,13 +25,15 @@ export default function List() {
 	return (
 		<div>
 			<h1>Characters</h1>
-			{loading
-				? 'Loading....'
-				: error
-				? error.message
-				: characters.map((character) => (
-						<Character key={character.id} character={character} />
-				  ))}
+			<div className="row">
+				{loading
+					? 'Loading....'
+					: error
+					? error.message
+					: characters.map((character) => (
+							<Character key={character.id} character={character} />
+					  ))}
+			</div>
 		</div>
 	);
 }
